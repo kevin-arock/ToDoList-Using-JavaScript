@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>To-Do-List</title>
 </head>
 <body>
     <nav>
         <h2>To-Do-List</h2>
-        <button>Log out</button>
+        
     </nav>
-    <div>
-        <input type="text" class="name">
-        <button class="add-btn" onclick="add()">add</button>
-        <table class="here">
-            <tr>
-                <th>S.No</th>
-                <th>Tasks</th>
-                <th>Action</th>
-            </tr>
-            <tr >
-            
-            </tr>
-        </table>
+    <p class="base"></p>
+    <div class="main">
+        <div class="fields">
+        <input type="text" class="name" placeholder="Write Your Task...">
+        <input type="date" class="date">
+        <button class="add-btn" onclick="add()">Add</button>
+        
+        </div>
+        <div class="container-main">
+            <p class="tsk">No Tasks.</p>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>

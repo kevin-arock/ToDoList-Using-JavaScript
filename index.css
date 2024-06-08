@@ -1,0 +1,156 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #111111d4;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr 100px;
+    column-gap: 10px;
+}
+.fields input{
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(205, 205, 246);
+    background-color: rgba(255, 253, 253, 0.942);
+    text-decoration-line: none;
+    box-shadow: inset 3px 5px 5px rgba(0, 0, 0, 0.207);
+    
+}
+.fields button{
+    background-color:rgb(205, 205, 246);
+    padding: 10px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.fields button:hover{
+    background-color:rgb(161, 161, 211);
+    cursor: pointer;
+}
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color:rgb(161, 161, 211);
+    padding: 0px 10px;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    
+}
+
+.container-main{
+    margin-top: 20px;
+}
+.container{
+    background-color: rgb(197, 177, 197);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 250px 1fr 100px;
+    column-gap: 30px;
+    row-gap: 20px;
+    align-items: center;
+    padding-right: 4px ;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0);
+}
+.container .t-btn{
+    height: 40px;
+    border: 2px solid red;
+    border-radius: 5px;
+    background-color: rgb(255, 161, 161);
+    font-weight: bold;
+}
+.container .t-btn:hover{
+    background-color: rgb(252, 126, 126);
+    cursor: pointer;
+}
+.container .pp{
+    word-wrap: break-word;
+}
+.base{
+    position: fixed;
+    font-size: small;
+    border-radius: 6px;
+    /* box-shadow: 0px 5px 35px rgb(254, 1, 1);
+    background-color: rgb(255, 171, 171);
+    color: red; */
+    bottom: 5px;
+    left: 20px;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: opacity,background-color,color;
+    transition-duration: 1s;
+    background-color: transparent;
+    color: transparent;
+    opacity: 0;
+
+}
+
+.success{
+    position: fixed;
+    font-size: small;
+    border-radius: 6px;
+    box-shadow: 0px 5px 35px rgb(19, 217, 29);
+    background-color: rgb(205, 255, 171);
+    color: green;
+    bottom: 5px;
+    left: 20px;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: opacity;
+    transition-duration: 1s;
+    opacity: 1;
+}
+.delete{
+    position: fixed;
+    font-size: small;
+    border-radius: 6px;
+    box-shadow: 0px 5px 35px rgb(254, 1, 1);
+    background-color: rgb(255, 171, 171);
+    color: red;
+    bottom: 5px;
+    left: 20px;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: opacity;
+    transition-duration: 1s;
+    opacity: 1;
+}
+
+.error{
+    position: fixed;
+    font-size: small;
+    border-radius: 6px;
+    box-shadow: 0px 5px 35px rgba(35, 1, 254, 0.661);
+    background-color: rgb(171, 186, 255);
+    color: blue;
+    bottom: 5px;
+    left: 20px;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: opacity;
+    transition-duration: 1s;
+    opacity: 1;
+}
+
+.tsk{
+    margin-top: 5px;
+    font-weight: bold;
+    color: white;
+}

@@ -14,7 +14,7 @@ function add(){
         setTimeout(()=>{
             p.classList.remove('error');
             p.classList.add('base');
-        },1100)
+        },1200)
         return;
     }
     else if(name.value === '' || date.value === '' ){
@@ -25,7 +25,7 @@ function add(){
         setTimeout(()=>{
             p.classList.remove('error');
             p.classList.add('base');
-        },1100)
+        },1200)
         return;
        
     }
@@ -42,7 +42,7 @@ function add(){
     setTimeout(()=>{
         p.classList.remove('success');
         p.classList.add('base');
-    },1100)
+    },1200)
     name.value = '';
     date.value = '';
     display();
@@ -58,7 +58,7 @@ function del(){
         setTimeout(()=>{
             p.classList.remove('delete');
             p.classList.add('base');
-        },1100);
+        },1200);
 }
 function display(){
     let show = ``;

@@ -12,10 +12,11 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 .fields{
     display: grid;
-    grid-template-columns: 1fr 1fr 100px;
+    grid-template-columns: 1fr 1fr 80px;
     column-gap: 10px;
 }
 .fields input{
@@ -54,6 +55,8 @@ nav{
 
 .container-main{
     margin-top: 20px;
+    
+    
 }
 .container{
     background-color: rgb(197, 177, 197);
@@ -68,6 +71,7 @@ nav{
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0px 10px 7px rgba(0, 0, 0);
+    width: fit-content;
 }
 .container .t-btn{
     height: 40px;

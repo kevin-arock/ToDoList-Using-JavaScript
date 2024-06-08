@@ -1,4 +1,8 @@
-const arr = [];
+let arr = JSON.parse(localStorage.getItem('arr'));
+if(arr === null){
+    arr = []
+}
+display();
 function add(){
     const name = document.querySelector('.name');
     const date = document.querySelector('.date');
@@ -10,7 +14,7 @@ function add(){
         setTimeout(()=>{
             p.classList.remove('error');
             p.classList.add('base');
-        },3000)
+        },1000)
         return;
     }
     else if(name.value === '' || date.value === '' ){
@@ -21,7 +25,7 @@ function add(){
         setTimeout(()=>{
             p.classList.remove('error');
             p.classList.add('base');
-        },3000)
+        },1000)
         return;
        
     }
@@ -38,10 +42,11 @@ function add(){
     setTimeout(()=>{
         p.classList.remove('success');
         p.classList.add('base');
-    },3000)
+    },1000)
     name.value = '';
     date.value = '';
     display();
+    localStorage.setItem('arr',JSON.stringify(arr));
     console.log(arr);
 
 }
@@ -53,15 +58,16 @@ function del(){
         setTimeout(()=>{
             p.classList.remove('delete');
             p.classList.add('base');
-        },3000);
+        },1000);
 }
 function display(){
     let show = ``;
     for(let i = 0;i<arr.length;i++){
-        show+=`<div class="container"><p class="pp">${arr[i].name}</p><p class="pp">${arr[i].date}</p><button class="t-btn" onclick="arr.splice(${i},1);del();display();">delete</button></div>`;
+        show+=`<div class="container"><p class="pp">${arr[i].name}</p><p class="pp">${arr[i].date}</p><button class="t-btn" onclick="arr.splice(${i},1);localStorage.setItem('arr',JSON.stringify(arr));display();del();">delete</button></div>`;
     }
     if(arr.length === 0){
         document.querySelector('.container-main').innerHTML = `<p class="tsk">No Tasks.</p>`;
+        localStorage.removeItem('arr');
         return;    
     }
     document.querySelector('.container-main').innerHTML = show;
